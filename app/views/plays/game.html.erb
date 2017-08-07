@@ -1,0 +1,18 @@
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Welcome to longuest word game</h1>
+        <h2><%= @grid.join(" ") %></h2>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <form action="<%= score_path %>">
+          <input type="text" placeholder="Get the longest word" name="attempt" class="form-control text-center">
+          <input type="hidden" name="grid" value="<%= @grid.join("") %>">
+          <input type="hidden" name="start" value="<%= @start_time %>">
+          <input type="submit" class="btn btn-primary margin" value="Go, time's running">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

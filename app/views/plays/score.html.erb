@@ -1,0 +1,21 @@
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Results for : <%= @attempt %></h1>
+        <h2>détails</h2>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <ul>
+          <li>Time : <%= @result[:time]%> second</li>
+          <li>Means : <%= @result[:translation]%></li>
+          <li>Score : <%= @result[:score]%> points!</li>
+          <li>Number of games played : <%= session[:number_of_games]%></li>
+        </ul>
+      </div>
+      <div>
+        <%= link_to 'rejouer', game_path %>
+      </div>
+    </div>
+  </div>
+</div>
